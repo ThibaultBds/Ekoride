@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgb(176, 154, 193);
+    background: #CCAAE6;
     padding: 10px;
 }
     nav ul {
@@ -34,25 +34,45 @@ body {
 }
 
 .hero-image {
-    background-color: rgb(71, 255, 182);
+    background-color: rgb(35, 143, 253);
     height: 300px;
 }
+
+.hero-text {
+        font-size: 20px;
+        margin: 10px 10 15px 0;
+}
+
+.hero-text h1,
 .hero-text p {
-    font-size: 16px;
-    margin: 10px 0 15px 0;
+    color: white;
+
 }
 
 .form-search form{
     display: flex;
-     margin: 40px;
-    border-radius: 10;
-    width: 60px;
+    margin: 40px;
+    border-radius: 10;;
     gap: 8px;
 }
 
-.form-search input, 
+.form-search input {
+    width: 300px;
+    border-radius: 20px;
+    border: 1px solid black;
+    text-align: center;
+}
+
 .form-search button {
     height: 40px;
     padding: 0 10px;
     font-size: 10px;
+    width: 50px;
+    border-radius: 60px;
+    border: 1px solid black;
+
+}
+
+img {
+    width: 25px;
 }
