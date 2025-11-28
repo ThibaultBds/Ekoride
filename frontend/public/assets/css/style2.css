@@ -16,7 +16,11 @@
     gap : 15px;
 }
 
-h1, nav, p {
+h1 {
+  color: red;
+}
+
+nav, p {
     color: black;
 }
 
