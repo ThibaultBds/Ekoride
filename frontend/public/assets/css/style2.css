@@ -16,12 +16,20 @@
     gap : 15px;
 }
 
-h1 {
-  color: red;
+.fa-leaf {
+    color: rgb(72, 179, 72);
 }
 
-nav, p {
-    color: black;
+.test {
+  color: rgb(105, 105, 219);
+}
+
+nav ul li {
+    color: rgb(105, 105, 219);
+}
+
+.fa-car, .fa-house, .fa-question, .fa-address-book, .fa-users, .fa-user-plus, .fa-leaf {
+    margin-right: 8px;
 }
 
 body {
@@ -36,6 +44,14 @@ body {
     margin-left: 10px;
     margin-right: 10px;
     height: 70%;
+}
+
+.box {
+  max-width: 400px;
+  width: 100%;
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .cont1 {
@@ -104,7 +120,7 @@ body {
 }
 
 .img-ecologie {
-    height: 300px;
+    height: 350px;
     width: 30%;
     border-radius: 10px;
 }
