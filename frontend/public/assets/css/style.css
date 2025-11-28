@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    margin-top: 10px;
 }
     nav ul {
     display: flex;
@@ -16,6 +16,10 @@
     gap : 15px;
 }
 
+nav ul li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
 .fa-leaf {
     color: rgb(72, 179, 72);
 }
