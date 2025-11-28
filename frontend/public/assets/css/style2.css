@@ -38,35 +38,31 @@ body {
 
 .container-hero {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, minmax(250px, 600px));
     gap: 50px;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    height: 70%;
-}
-
-.box {
-  max-width: 400px;
-  width: 100%;
-  background: #222;
-  padding: 20px;
-  border-radius: 10px;
+    height: 75%;
+    margin: 10px;
+    justify-content: center;
 }
 
 .cont1 {
     background-color: lightblue;
-    width: 100%;
+    padding: 30px;
     text-align: center;
     border-radius: 20px;
+    max-width: 500px;
+    width: 100%;
 
 }
 
 .cont2 {
     background-color: lightgreen;
-    width: 100%;
+    padding: 30px;
     text-align: center;
     border-radius: 20px;
+    max-width: 500px;
+    width: 100%;
+
 }
 
 .form-search {
