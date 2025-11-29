@@ -133,37 +133,14 @@ body {
     flex-direction: column;
 }
 
-.stat1 {
-    margin: 15px;
-    border: 1px solid black;
-    border-radius: 10px;
+.avis1 {
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    padding: 20px;
+    justify-content: center;
+    
 }
 
-.img-ecologie {
-    height: 350px;
-    width: 30%;
-    border-radius: 10px;
-}
-
-.stat1-text {
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-  gap: 30px;
-}
-
-.stat1 ul {
-  padding: 0;
-  margin: 0;
-}
-
-.stat1-text li {
-    margin-bottom: 5px;
-    padding: 10px;
+.fa-circle-user {
+    text-align: left;
 }
 
 .stat2 {
