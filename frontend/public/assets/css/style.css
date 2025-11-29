@@ -1,8 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-
 }
+
     header {
     display: flex;
     justify-content: space-between;
@@ -16,20 +16,35 @@
     gap : 15px;
 }
 
-nav ul li:hover {
-    text-decoration: underline;
-    cursor: pointer;
+nav ul li {
+    border: 1px solid transparent;
+    transition: border-color .25s ease, background-color .25s ease;
+    padding: 8px 10px;
+    border-radius: 20px; 
+
 }
+
+nav ul li:hover {
+    border-color: white;
+    background-color: #89af90;
+}
+
+nav ul li:active {
+    background-color: white;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(105, 105, 219); 
+    transition: 2s ease;
+}
+
 .fa-leaf {
     color: rgb(72, 179, 72);
 }
 
 .test {
   color: rgb(105, 105, 219);
-}
-
-nav ul li {
-    color: rgb(105, 105, 219);
 }
 
 .fa-car, .fa-house, .fa-question, .fa-address-book, .fa-users, .fa-user-plus, .fa-leaf {
