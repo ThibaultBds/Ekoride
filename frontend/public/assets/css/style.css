@@ -133,20 +133,50 @@ body {
     flex-direction: column;
 }
 
-.avis1 {
+.title-avis {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+.avis {
+    margin: 15px;
+    border: 4px solid rgb(105, 105, 219);
+    box-shadow: 4px 6px 1px orange;
+    border-radius: 5%;
     display: flex;
-    justify-content: center;
-    
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px;
+    flex-direction: column;
 }
 
-.fa-circle-user {
-    text-align: left;
+.avis1,
+.avis2,    
+.avis3 {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.avis1 i,
+.avis2 i,
+.avis3 i {
+    font-size: 40px;
+}
+
+.texte p {
+    margin: 0;
+}
+
+.nom {
+    font-weight: bold;
 }
 
 .stat2 {
     margin: 15px;
-    border: 1px solid black;
-    border-radius: 10px;
+    border: 4px solid rgb(105, 105, 219);
+    box-shadow: -4px 6px 10px orange;    
+    border-radius: 5%;
     display: flex;
     justify-content: space-between;
     gap: 30px;
