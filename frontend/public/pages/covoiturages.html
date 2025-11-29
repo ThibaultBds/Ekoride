@@ -1,14 +1,67 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Ekoride - Covoiturages</title>
-        <link href="/frontend/public/assets/css/style2.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    </head>
+<html lang="fr">
+
+ <head>
+    <meta charset="utf-8">
+    <title>Ekoride</title>
+    <link href="/frontend/public/assets/css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/tabler-icons@2.44.0/iconfont/tabler-icons.min.css" rel="stylesheet">
+  </head>
+
+
 <body>
-<p>cc</p>
-</body>
-</html>
+    <header>
+        <h1 class="test"><i class="fa-solid fa-leaf"></i> Ekoride</h1>
+        <nav>
+            <ul>
+                <li><i class="fa-solid fa-house"></i> Accueil</li>
+                <li><i class="fa-solid fa-car"></i> <a href="covoiturages.html">Covoiturages</a></li>
+                <li><i class="fa-solid fa-question"></i> <a href="quisommesnous.html">Qui sommes-nous ?</a></li>
+                <li><i class="fa-solid fa-address-book"></i> <a href="contact.html">Contact</a></li>
+                <li><i class="fa-solid fa-users"></i> <a href="connexion.html">Connexion</a></li>
+                <li><i class="fa-solid fa-user-plus"></i> <a href="inscriptions.html">Inscriptions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container-hero">
+        <div class="cont1">
+            <h2>Vous souhaitez agir pour l'environnement ? Ne perdez plus une seconde, nous avons la solution pour vous !</h2>
+            <p>Ce qu'Ékoride vous propose :</p>
+            <ul>
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
+            </ul>
+        </div>
+        <div class="cont2">
+            test2
+        </div>
+    </div>
+    <form class="form-covoit">
+        <input class="depart-covoit" type="text" id="departure" name="departure" placeholder="Départ">
+        <input class="arrivee-covoit" type="text" id="arrival" name="arrival" placeholder="Arrivée">
+        <input class="date-covoit" type="text" id="date" name="date" placeholder="Date">
+
+        <button class="btn-covoit" type="submit">Rechercher</button>
+    </form>
+
+    <form class="advc-filtre">
+        <label for="filter">Filtres avancés :</label>
+        <select id="filter" name="filter">
+            <option value="none">Aucun</option>
+            <option value="price-asc">Prix croissant</option>
+            <option value="price-desc">Prix décroissant</option>
+            <option value="date-asc">Date croissante</option>
+            <option value="date-desc">Date décroissante</option>
+        </select>
+        <button class="btn-filtre" type="submit">Appliquer</button>
+    </form>
+</body>     
+</html> 

@@ -40,6 +40,7 @@ nav ul li a {
 }
 
 .fa-leaf {
+    margin-left: 17px;
     color: rgb(72, 179, 72);
 }
 
@@ -140,8 +141,9 @@ body {
 }
 .avis {
     margin: 15px;
+    background-color: rgb(241, 221, 221);
     border: 4px solid rgb(105, 105, 219);
-    box-shadow: 4px 6px 1px orange;
+    box-shadow: 3px 4px 1px orange;
     border-radius: 5%;
     display: flex;
     justify-content: space-between;
@@ -176,7 +178,7 @@ body {
     background-color: rgb(241, 221, 221);
     margin: 15px;
     border: 4px solid rgb(105, 105, 219);
-    box-shadow: -4px 6px 10px orange;    
+    box-shadow: -3px 4px 10px orange;    
     border-radius: 5%;
     display: flex;
     justify-content: space-between;
@@ -216,8 +218,35 @@ body {
 
 .stat3 {
     background-color: cyan;
-    margin: 5px;
+    margin: 15px;
+    border: 4px solid rgb(105, 105, 219);
+    border-radius: 5%;
     text-align: center;
-    border: 1px solid white;
+    gap: 30px;
+    padding: 20px;
+}
+
+.form-covoit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.depart-covoit,
+.arrivee-covoit,
+.date-covoit {
+    border: 1px solid; 
     border-radius: 10px;
+    padding: 10px;
+    width: 250px;
+}
+
+.btn-covoit {
+    height: 44px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 5px;
+    width: 115px;
+    text-align: center;
 }
