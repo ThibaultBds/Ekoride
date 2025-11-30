@@ -252,6 +252,7 @@ body {
 }
 
 .form-avances {
+    margin-top: 20px;
     border: 1px solid black;
     border-radius: 20px;
 }
@@ -266,4 +267,27 @@ body {
 .txt-fil {
     text-align: center;
     font-weight: bold;
+}
+
+.ride-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    
+}
+
+.ride-card h3 {
+    text-align: center;
+}
+
+.ride-price,
+.ride-details {
+    display: flex;
+    justify-content:flex-start;
+    align-items: left;
+    padding-left: 20px;
 }
