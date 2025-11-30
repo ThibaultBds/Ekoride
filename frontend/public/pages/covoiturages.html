@@ -51,10 +51,11 @@
         <input class="date-covoit" type="text" id="date" name="date" placeholder="Date">
         <button class="btn-covoit" type="submit">Rechercher</button>
     </form>
-    <div class="txt-fil">
-    <p>Filtres avancés :</p>
-    </div>
-    <form class="adv-fil" method="get" action>
+    <div class="form-avances">
+        <div class="txt-fil">
+            <p>Filtres avancés :</p>
+        </div>
+        <form class="adv-fil" method="get" action>
             <label for="prix_max">Prix max :</label>
             <input type="number" name="prix_max" id="prix_max" min="0">
             <label for="note_min">Note minimale :</label>
@@ -67,6 +68,7 @@
             </select>
             <button type="submit">Filtrer</button>
         </form>
+    </div>
 </body>
 
 </html>

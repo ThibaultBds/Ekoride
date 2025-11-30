@@ -251,6 +251,10 @@ body {
     text-align: center;
 }
 
+.form-avances {
+    border: 1px solid black;
+    border-radius: 20px;
+}
 .adv-fil {
     display: flex;
     justify-content: center;
