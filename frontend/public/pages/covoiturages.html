@@ -49,38 +49,26 @@
         <input class="depart-covoit" type="text" id="departure" name="departure" placeholder="Départ">
         <input class="arrivee-covoit" type="text" id="arrival" name="arrival" placeholder="Arrivée">
         <input class="date-covoit" type="text" id="date" name="date" placeholder="Date">
-
         <button class="btn-covoit" type="submit">Rechercher</button>
     </form>
-
-    <form class="advanced-filter">
+    <div class="form-avances">
+        <div class="txt-fil">
+            <p>Filtres avancés :</p>
         </div>
-        <div class="txt-filtre">
-            <label for="filter">Filtres avancés :</label>
-        </div>
-        <div class="nb-place">
-            <p>Places restantes</p>
-            <select id="filter" name="filter">
-                <option value="none">1</option>
-                <option value="price-asc">2</option>
-                <option value="price-desc">3</option>
-                <option value="date-asc">4</option>
-                <option value="date-desc">5</option>
+        <form class="adv-fil" method="get" action>
+            <label for="prix_max">Prix max :</label>
+            <input type="number" name="prix_max" id="prix_max" min="0">
+            <label for="note_min">Note minimale :</label>
+            <input type="number" name="note_min" id="note_min" min="1" max="5">
+            <label for="ecologique">Écologique :</label>
+            <select name="ecologique" id="ecologique">
+                <option value>Tous</option>
+                <option value>Oui</option>
+                <option value>Non</option>
             </select>
-            <button class="btn-filtre" type="submit">Appliquer</button>
-        </div>
-        <div class="nb-place">
-            <p>Places restantes</p>
-            <select id="filter" name="filter">
-                <option value="none">Aucun</option>
-                <option value="price-asc">Prix croissant</option>
-                <option value="price-desc">Prix décroissant</option>
-                <option value="date-asc">Date croissante</option>
-                <option value="date-desc">Date décroissante</option>
-            </select>
-            <button class="btn-filtre" type="submit">Appliquer</button>
-        </div>
-    </form>
+            <button type="submit">Filtrer</button>
+        </form>
+    </div>
 </body>
 
 </html>
