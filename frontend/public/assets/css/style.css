@@ -284,10 +284,12 @@ body {
     text-align: center;
 }
 
-.ride-price,
-.ride-details {
-    display: flex;
-    justify-content:flex-start;
-    align-items: left;
-    padding-left: 20px;
+.ride-price p
+
+.ride-details span {
+    text-align: left;
+}
+
+.material-icons {
+    
 }
