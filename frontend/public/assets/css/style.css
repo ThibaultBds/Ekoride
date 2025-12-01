@@ -252,6 +252,7 @@ body {
 }
 
 .form-avances {
+    margin-top: 20px;
     border: 1px solid black;
     border-radius: 20px;
 }
@@ -260,9 +261,29 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+
 }
 
 .txt-fil {
     text-align: center;
     font-weight: bold;
+}
+
+.ride-details p {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espace entre icône et texte */
+    margin: 6px 0;
+}
+
+.ride-details .material-icons {
+    font-size: 20px;
+    color: #243436;
+}
+
+.ride-details img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
 }
