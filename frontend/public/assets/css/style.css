@@ -269,27 +269,22 @@ body {
     font-weight: bold;
 }
 
-.ride-card {
+
+.ride-details p {
     display: flex;
-    flex-direction: column;
-    border: 1px solid black;
-    margin-left: 10px;
-    margin-top: 10px;
-    padding: 5px;
-    border-radius: 20px;
-    
+    align-items: center;
+    gap: 8px; /* Espace entre icône et texte */
+    margin: 6px 0;
 }
 
-.ride-card h3 {
-    text-align: center;
+.ride-details .material-icons {
+    font-size: 20px;
+    color: #243436;
 }
 
-.ride-price p
-
-.ride-details span {
-    text-align: left;
-}
-
-.material-icons {
-    
+.ride-details img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
 }
