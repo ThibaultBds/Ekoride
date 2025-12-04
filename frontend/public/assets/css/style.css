@@ -299,6 +299,7 @@ body {
 .ride-details p {
     display: flex;
     align-items: center;
+    gap: 8px; /* Espace entre icône et texte */
     gap: 10px; 
     margin: 6px 0;
 }
