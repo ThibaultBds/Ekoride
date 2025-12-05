@@ -11,6 +11,11 @@ header {
     flex-wrap: wrap;
 }
 
+.logo-ecoride {
+    height: 15px;
+    width: 10px;
+}
+
 nav ul {
     display: flex;
     list-style: none; 
@@ -41,10 +46,6 @@ nav ul li a {
     transition: 2s ease;
 }
 
-.fa-leaf {
-    margin-left: 17px;
-    color: rgb(72, 179, 72);
-}
 
 .test {
   color: rgb(105, 105, 219);
