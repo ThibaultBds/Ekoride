@@ -398,5 +398,7 @@ body {
 }
 
 .ride-card button:hover {
-    transform: scale(1.3);
+    font-weight: bold;
+    transform: scale(1.2);
+    background-color: rgb(135, 212, 135);
 }
