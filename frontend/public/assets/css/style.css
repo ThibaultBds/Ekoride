@@ -228,6 +228,10 @@ body {
     padding: 20px;
 }
 
+h1 {
+    color: rgb(72, 179, 72);   
+}
+
 .contxainer-hero {
     display: flex;
     flex-direction: column;
@@ -239,12 +243,21 @@ body {
 }
 
 .contx1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px; 
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 10px;
     background-color:#E2CEF3;
-    padding: 30px;
     height: 100%;
     text-align: center;
     border-radius: 20px;
-    width: 100%;
+    width: 80%;
 }
 
 .contx1 h2 {
@@ -255,19 +268,7 @@ body {
     font-style: italic;
 }
 
-.contx2 {
-    display: flex;
-    border: 5px solid purple; 
-    background-color: rgb(241, 241, 3);
-    padding-left: 40px;
-    padding-right: 40px; 
-    padding-top: 30px;
-    padding-bottom: 30px;
-    border-radius: 20%;
-    margin-bottom: 10px;
-}
-
-.contx2 img { 
+.contx1 img { 
     width: auto;
     height: 375px;
     border-radius: 80px;     
