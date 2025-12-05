@@ -326,7 +326,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 20px; 
-    margin: 0 auto;
+    margin: 0 auto 10px auto;
 }
 
 .ride-card {
@@ -339,7 +339,6 @@ body {
 
 .ride-details {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
