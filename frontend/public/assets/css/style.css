@@ -12,8 +12,13 @@ header {
 }
 
 .logo-ecoride {
-    height: 15px;
-    width: 10px;
+    width: 150px;
+}
+
+.logo-ecoride img {
+    height: auto;
+    width: 90%;
+    max-height: 70px;
 }
 
 nav ul {
