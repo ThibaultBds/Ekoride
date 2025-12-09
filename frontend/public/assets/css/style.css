@@ -248,17 +248,21 @@ h1 {
 }
 
 .contx1 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    padding: 30px 40px; 
-    background-color: #E2CEF3;
-    border-radius: 20px;
+    position: relative;
     width: 100%;
-    max-width: 1200px;
-    height: auto;
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    color: #fff;
+    background-image: 
+    linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.03)),
+        url("/frontend/public/assets/img/chapo.jpg");
+        background-size: cover;
+        background-position: 30% 50%;
+        background-repeat: no-repeat;
 } 
 
 .contx1 h2 {
@@ -269,6 +273,11 @@ h1 {
     font-style: italic;
 }
 
+.contx1 h2,
+.contx2 p {
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.45);
+}
 .contx1 img { 
     border-radius: 80px;      
     max-width : auto;
