@@ -73,7 +73,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 50px;
+    gap: 25px;
     height: 75%;
     margin: 15px;
 }
@@ -423,7 +423,8 @@ h1 {
     background-color: rgb(135, 212, 135);
 }
 
-.contain-login {
+.contain-login,
+.contain-register {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -435,11 +436,15 @@ h1 {
     margin: auto;
     padding-top: 20px;
     border-radius: 20px;
+}
 
+.contain-login h2,
+.contain-register h2 {
+    padding-bottom: -5px;
 }
 
 .form-login,
-.pswrd {
+.form-register {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -447,17 +452,17 @@ h1 {
     gap: 30px;
 }
 
-.login {
-    display: flex;
-    flex-wrap: wrap; 
-    flex-direction: row; /* MODIFIÉ : Aligne les éléments horizontalement (sur une ligne) */
-    
-    /* Maintenant, utilisons les propriétés de Flexbox pour l'espacement et l'alignement */
-    justify-content: space-between; /* Pousse l'Input à gauche et le Lien à droite */
-    align-items: center;            /* Centre les éléments verticalement l'un par rapport à l'autre */
-    width: 100%;}
 input {
     text-align: center;
     border: 1px solid gray;
     border-radius: 20px;
 }
+
+.login-link {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: auto;
+    gap: 20px;
+}
+
