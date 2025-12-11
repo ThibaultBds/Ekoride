@@ -343,12 +343,28 @@ h1 {
   text-align: center;
 }
 
+.page-container {
+  display: flex;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+  align-items: center;
+}
+
+.main-content {
+    flex-grow: 1; 
+    min-width: 0; 
+}
+
 .form-avances {
+  width: 280px;
+  min-width: 250px;
   margin-top: 20px;
+  background-color: rgb(241, 240, 248);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   border: 1px solid black;
   border-radius: 40px;
-  width: 20%;
-  margin: 20px auto;
   padding: 10px;
 }
 
@@ -408,8 +424,6 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 20px;
   margin: 0 auto 10px auto;
 }
