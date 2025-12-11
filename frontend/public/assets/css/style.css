@@ -1,256 +1,257 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: white;
+  background-color: white;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
 }
 
 .logo-ecoride {
-    width: 150px;
+  width: 150px;
 }
 
 .logo-ecoride img {
-    height: auto;
-    width: 90%;
-    max-height: 70px;
+  height: auto;
+  width: 90%;
+  max-height: 70px;
 }
 
 nav ul {
-    display: flex;
-    list-style: none; 
-    flex-wrap: wrap; 
-    gap : 15px;
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 nav ul li {
-    border: 1px solid transparent;
-    transition: border-color .25s ease, background-color .25s ease;
-    padding: 8px 10px;
-    border-radius: 20px; 
-
+  border: 1px solid transparent;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+  padding: 8px 10px;
+  border-radius: 20px;
 }
 
 nav ul li:hover {
-    border-color: white;
-    background-color: #89af90;
+  border-color: white;
+  background-color: #89af90;
 }
 
 nav ul li:active {
-    background-color: white;
+  background-color: white;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: rgb(105, 105, 219); 
-    transition: 2s ease;
+  text-decoration: none;
+  color: rgb(105, 105, 219);
+  transition: 2s ease;
 }
-
 
 .test {
   color: rgb(105, 105, 219);
 }
 
-.fa-car, .fa-house, .fa-question, .fa-address-book, .fa-users, .fa-user-plus, .fa-leaf {
-    margin-right: 8px;
+.fa-car,
+.fa-house,
+.fa-question,
+.fa-address-book,
+.fa-users,
+.fa-user-plus,
+.fa-leaf {
+  margin-right: 8px;
 }
 
 h2,
 p {
-    font-family:Montserrat, sans-serif;
+  font-family: Montserrat, sans-serif;
 }
 
 .container-hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 25px;
-    height: 75%;
-    margin: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  height: 75%;
+  margin: 15px;
 }
 
 .cont1,
 .cont2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 30px 40px 30px 40px;
-    margin-bottom: 10px;
-    height: 100%;
-    text-align: center;
-    border-radius: 20px;
-    width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px 40px 30px 40px;
+  margin-bottom: 10px;
+  height: 100%;
+  text-align: center;
+  border-radius: 20px;
+  width: 80%;
 }
 
 .cont1 h2,
 .cont2 h2 {
-    font-weight: bold;
-    font-style: italic;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .cont1 img,
-.cont2 img { 
-    width: auto;
-    height: 375px;
-    border-radius: 80px;     
-    margin-right: 10px;
+.cont2 img {
+  width: auto;
+  height: 375px;
+  border-radius: 80px;
+  margin-right: 10px;
 }
 
 .form-search {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px; 
-    flex-wrap: nowrap;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  flex-wrap: nowrap;
 }
 
-.form-search input{
-    height: 40px;
-    width: 200px;
-    border: 1px solid;
-    border-radius: 20px;
-    text-align: center;
-    padding: 5px 10px;
+.form-search input {
+  height: 40px;
+  width: 200px;
+  border: 1px solid;
+  border-radius: 20px;
+  text-align: center;
+  padding: 5px 10px;
 }
 
 .form-search button {
-    margin-left: 10px;
-    height: 40px;
-    padding: 0 15px;
-    font-size: 12px;
-    width: 50px;
-    border: 1px solid; 
-    border-radius: 20px;
+  margin-left: 10px;
+  height: 40px;
+  padding: 0 15px;
+  font-size: 12px;
+  width: 50px;
+  border: 1px solid;
+  border-radius: 20px;
 }
 
 .form-search img {
-    width: 25px;
-}   
+  width: 25px;
+}
 
-.presentation-entreprise h2,
+.presentation-entreprise,
 .benefits {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 40px 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  }
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
 
 .presentation-entreprise h2,
 .benefits h3 {
-    color: #2d3436;
-    text-align: center;
-    margin-bottom: 30px;
-  }
+  color: #2d3436;
+  text-align: center;
+  margin-bottom: 30px;
+}
 
-    /* BENEFITS */
-  .benefit-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-  }
+.benefit-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
 
-  .benefit-list div {
-    text-align: center;
-    padding: 30px 20px;
-    background: #f8f9fa;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-  }
+.benefit-list div {
+  text-align: center;
+  padding: 30px 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
 
-  .benefit-list div:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 25px rgba(33,150,243,0.2);
-  }
+.benefit-list div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(33, 150, 243, 0.2);
+}
 
-  .benefit-list .material-icons {
-    font-size: 48px;
-    color: #00b894; /* Retour au vert d'origine */
-    margin-bottom: 15px;
-  }
-
-
+.benefit-list .material-icons {
+  font-size: 48px;
+  color: #00b894; /* Retour au vert d'origine */
+  margin-bottom: 15px;
+}
 
 .info-stats ul li {
-    list-style: none;
-
+  list-style: none;
 }
 
 .info-stats {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .title-avis {
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
 }
+
 .avis {
-    margin: 15px;
-    background-color: rgb(190, 247, 244);
-    border-radius: 20px;
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    padding: 20px;
-    flex-direction: column;
+  margin: 15px;
+  background-color: rgb(190, 247, 244);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 20px;
+  flex-direction: column;
 }
 
 .avis1,
-.avis2,    
+.avis2,
 .avis3 {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
 }
 
 .avis1 i,
 .avis2 i,
 .avis3 i {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 .texte p {
-    margin: 0;
+  margin: 0;
 }
 
 .nom {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .stat2 {
-    background-color: rgb(190, 247, 244);
-    margin: 15px;
-    border-radius: 20px;
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    padding: 20px;
+  background-color: rgb(190, 247, 244);
+  margin: 15px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 20px;
 }
 
 .stat2 h2 {
-    text-align: right;
-    font-style: italic;
-    text-decoration: underline;
+  text-align: right;
+  font-style: italic;
+  text-decoration: underline;
 }
 
 .img-car {
-    height: 300px;
-    width: 40%;
-    border-radius: 10px;
-    object-fit: cover;
+  height: 300px;
+  width: 40%;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .stat2-text {
@@ -266,248 +267,245 @@ p {
 }
 
 .stat2-text li {
-    margin-bottom: 5px;
-    padding: 10px;
+  margin-bottom: 5px;
+  padding: 10px;
 }
 
 .stat3 {
-    background-color: rgb(190, 247, 244);
-    margin: 15px;
-    border-radius: 20px;
-    text-align: center;
-    gap: 30px;
-    padding: 20px;
+  background-color: rgb(190, 247, 244);
+  margin: 15px;
+  border-radius: 20px;
+  text-align: center;
+  gap: 30px;
+  padding: 20px;
 }
 
 h1 {
-    color: rgb(72, 179, 72);   
+  color: rgb(72, 179, 72);
 }
 
 .contx1 {
-    position: relative;
-    width: 100%;
-    min-height: 360px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 40px 20px;
-    color: #fff;
-    background-image: 
-    linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.03)),
-        url("/frontend/public/assets/img/trajety.jpg");
-        background-size: cover;
-        background-position: 30% 75%;
-        background-repeat: no-repeat;
-    margin-bottom: 20px;    
-    margin-top: 5px;
-} 
+  position: relative;
+  width: 100%;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px 20px;
+  color: #fff;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.03)),
+    url("/frontend/public/assets/img/trajety.jpg");
+  background-size: cover;
+  background-position: 30% 75%;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
 
 .contx1 h2 {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .contx1 p {
-    font-style: italic;
+  font-style: italic;
 }
 
 .contx1 h2,
 .contx1 p {
-    color: #fff;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.45);
-    font-size: 30px;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+  font-size: 30px;
 }
 
 .form-covoit {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .depart-covoit,
 .arrivee-covoit,
 .date-covoit {
-    border: 1px solid; 
-    border-radius: 10px;
-    padding: 10px;
-    width: 250px;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 10px;
+  width: 250px;
 }
 
 .btn-covoit {
-    height: 44px;
-    border: 1px solid black;
-    border-radius: 20px;
-    padding: 5px;
-    width: 115px;
-    text-align: center;
+  height: 44px;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 5px;
+  width: 115px;
+  text-align: center;
 }
 
 .form-avances {
-    margin-top: 20px;
-    border: 1px solid black;
-    border-radius: 40px;
-    width: 20%;
-    margin: 20px auto;
-    padding: 10px;
+  margin-top: 20px;
+  border: 1px solid black;
+  border-radius: 40px;
+  width: 20%;
+  margin: 20px auto;
+  padding: 10px;
 }
 
 .form-avances input {
-    border: 1px solid;
-    border-radius: 40px;
-    padding: 5px;
+  border: 1px solid;
+  border-radius: 40px;
+  padding: 5px;
 }
 
 .form-avances .txt-fil {
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px; 
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-
 .filtres-masques {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in;
 }
 
 .filtres-actifs {
-    max-height: 500px;
-    opacity: 1;
-    padding-top: 15px;
-    border-top: 1px solid #ddd;
+  max-height: 500px;
+  opacity: 1;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
 }
 
 .adv-fil {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 20px;
-    gap: 15px;
-    padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 15px;
+  padding: 10px;
 }
 
 .adv-fil button {
-    background-color: lightblue;
-    border: none;
-    border-radius: 30px;
-    padding: 10px;
-    width: 130px;
+  background-color: lightblue;
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+  width: 130px;
 }
 .adv-fil button:hover {
-    background: rgb(94, 94, 104);
+  background: rgb(94, 94, 104);
 }
 
 .txt-fil {
-    text-align: center;
-    font-weight: bold;
+  text-align: center;
+  font-weight: bold;
 }
 
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px; 
-    margin: 0 auto 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 0 auto 10px auto;
 }
 
 .ride-card {
-    width: 55%; 
-    border: 1px solid black;
-    border-radius: 10px;
-    background-color: rgb(241, 240, 248);
-    padding: 10px;
+  width: 55%;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(241, 240, 248);
+  padding: 10px;
 }
 
 .ride-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .ride-details p {
-    display: flex;
-    align-items: center;
-    gap: 10px; 
-    margin: 6px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 6px 0;
 }
 
 .ride-details .material-icons {
-    font-size: 20px;
-    color: #243436;
+  font-size: 20px;
+  color: #243436;
 }
 
 .ride-details img {
-    width: 70px;
-    height: 75px;
-    border-radius: 70px;
-    object-fit: cover;
-    object-position: 70% 30%;
+  width: 70px;
+  height: 75px;
+  border-radius: 70px;
+  object-fit: cover;
+  object-position: 70% 30%;
 }
 
 .ride-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .ride-card button {
-    background-color: rgb(205, 236, 205);
-    border: none;
-    border-radius: 30px;
-    padding: 10px;
+  background-color: rgb(205, 236, 205);
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
 }
 
 .ride-card button:hover {
-    font-weight: bold;
-    transform: scale(1.2);
-    background-color: rgb(135, 212, 135);
+  font-weight: bold;
+  transform: scale(1.2);
+  background-color: rgb(135, 212, 135);
 }
 
 .contain-login,
 .contain-register {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-    border-radius: 20px;
-    width: 40%;
-    gap: 20px;
-    margin: auto;
-    padding-top: 20px;
-    border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 40%;
+  gap: 20px;
+  margin: auto;
+  padding-top: 20px;
+  border-radius: 20px;
 }
 
 .contain-login h2,
 .contain-register h2 {
-    padding-bottom: -5px;
+  padding-bottom: -5px;
 }
 
 .form-login,
 .form-register {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding-top: 30px;
-    gap: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  gap: 30px;
 }
 
 input {
-    text-align: center;
-    border: 1px solid gray;
-    border-radius: 20px;
+  text-align: center;
+  border: 1px solid gray;
+  border-radius: 20px;
 }
 
 .login-link {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    margin: auto;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 20px;
 }
-
