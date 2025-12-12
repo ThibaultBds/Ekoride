@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/frontend/public/assets/css/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://unpkg.com/tabler-icons@2.44.0/iconfont/tabler-icons.min.css" rel="stylesheet"/>
+    <title>Détail du covoiturage - Ekoride</title>
+</head>
+<body>
+    <main>
+        <section class="detail-container">
+            <div class="detail-card">
+                <!-- Filtres avancés -->
+                <div class="filters-toggle-wrapper">
+                    <button id="toggle-filters" class="btn-filters">
+                        <span class="material-icons">tune</span> 
+                        Filtres avancés
+                    </button>
+                    <div id="advanced-filters" class="advanced-filters-form">
+                        <form method="get" action="covoiturages.php">
+                            <div class="filter-group">
+                                <label for="prix_max">Prix max :</label>
+                                <input type="number" name="prix_max" id="prix_max" min="0">
+                            </div>
+                            <div class="filter-group">
+                                <label for="note_min">Note min :</label>
+                                <input type="number" name="note_min" id="note_min" min="1" max="5">
+                            </div>
+                            <div class="filter-group">
+                                <label for="ecologique">Écologique :</label>
+                                <select name="ecologique" id="ecologique">
+                                    <option value="">Tous</option>
+                                    <option value="1">Oui</option>
+                                    <option value="0">Non</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn-primary">Filtrer</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="detail-header">
+                    <h2>
+                        <?= htmlspecialchars($covoiturage['ville_depart']) ?> → <?= htmlspecialchars($covoiturage['ville_arrivee']) ?>
+                    </h2>
+                    <div class="conductor-info">
+                        <?php
+                        $avatar_url = ($covoiturage['conducteur'] === 'marc') ? 'images/sebastien.jpg' : ($covoiturage['conducteur_avatar_url'] ?? 'images/default_avatar.png');
+                        ?>
+                        <img src="../assets/<?= htmlspecialchars($avatar_url) ?>" alt="Avatar du conducteur" class="conductor-avatar">
+                        <span>Conducteur : <?= htmlspecialchars($covoiturage['conducteur']) ?></span>
+                    </div>
+                    <?php if ($covoiturage['is_ecological']): ?>
+                        <div class="badge-ecological">
+                            ⚡ Trajet écologique
+                        </div>
+                    <?php endif; ?>
+                </div>
+
+                <div class="detail-info">
+                    <div class="info-item">
+                        <h4>
+                            <span class="material-icons">schedule</span>
+                            Date et heure
+                        </h4>
+                        <p><?= date('d/m/Y à H:i', strtotime($covoiturage['date_depart'])) ?></p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4>
+                            <span class="material-icons">directions_car</span>
+                            Véhicule
+                        </h4>
+                        <p><?= htmlspecialchars($covoiturage['marque']) ?> <?= htmlspecialchars($covoiturage['modele']) ?></p>
+                        <p class="vehicle-energy"><?= ucfirst($covoiturage['energie']) ?></p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4>
+                            <span class="material-icons">people</span>
+                            Places disponibles
+                        </h4>
+                        <p><?= $covoiturage['places_restantes'] ?> / <?= $covoiturage['places_totales'] ?> places</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h4>
+                            <span class="material-icons">euro</span>
+                            Prix
+                        </h4>
+                        <p class="price-amount"><?= number_format($covoiturage['prix'], 2) ?>€</p>
+                        <p class="credit-required">Crédits requis : <?= $credit_requis ?></p>
+                    </div>
+                </div>
+
+                <!-- Section Préférences -->
+                <div class="preferences-section">
+                    <h3>Préférences du conducteur</h3>
+                    <div class="preferences-list">
+                        <span class="preference-item">
+                            <span class="material-icons"><?= ($preferences['fumeur'] ?? 'non') === 'oui' ? 'smoke_free' : 'smoking_rooms'; ?></span> 
+                            <?= ($preferences['fumeur'] ?? 'non') === 'oui' ? 'Non-fumeur' : 'Fumeur accepté' ?>
+                        </span>
+                        <span class="preference-item">
+                            <span class="material-icons"><?= ($preferences['animaux'] ?? 'non') === 'oui' ? 'pets' : 'do_not_disturb_on'; ?></span> 
+                            <?= ($preferences['animaux'] ?? 'non') === 'oui' ? 'Animaux acceptés' : 'Pas d\'animaux' ?>
+                        </span>
+                        <?php if (!empty($preferences['custom'])): ?>
+                            <span class="preference-item">
+                                <span class="material-icons">info</span> 
+                                <?= htmlspecialchars($preferences['custom']) ?>
+                            </span>
+                        <?php endif; ?>
+                    </div>
+                </div>
+
+                <!-- Section Avis -->
+                <div class="reviews-section">
+                    <h3>Avis sur le conducteur</h3>
+                    <?php if (empty($reviews)): ?>
+                        <p class="no-reviews">Ce conducteur n'a pas encore reçu d'avis.</p>
+                    <?php else: ?>
+                        <?php foreach ($reviews as $review): ?>
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <strong><?= htmlspecialchars($review['reviewer_pseudo']) ?></strong>
+                                    <div class="rating-stars">
+                                        <?php for ($i = 1; $i <= 5; $i++): ?>
+                                            <span class="material-icons <?= $i <= $review['note'] ? 'star-filled' : 'star-empty' ?>">star</span>
+                                        <?php endfor; ?>
+                                    </div>
+                                </div>
+                                <p class="review-comment">"<?= htmlspecialchars($review['commentaire']) ?>"</p>
+                                <small class="review-date"><?= date('d/m/Y', strtotime($review['created_at'])) ?></small>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                </div>
+
+                <div class="participation-section">
+                    <?php if (isset($_SESSION['user'])): ?>
+                        <?php if ($covoiturage['places_restantes'] > 0): ?>
+                            <?php if ($user_credit >= $credit_requis): ?>
+                                <p class="user-credit-info">
+                                    <span class="material-icons">account_balance_wallet</span>
+                                    Votre crédit : <?= $user_credit ?> crédits
+                                </p>
+                                <button id="participate-btn" class="btn-primary btn-large">
+                                    <span class="material-icons">add_circle</span>
+                                    Participer à ce covoiturage
+                                </button>
+                            <?php else: ?>
+                                <p class="insufficient-credit">
+                                    <span class="material-icons">warning</span>
+                                    Crédit insuffisant (<?= $user_credit ?>/<?= $credit_requis ?> requis)
+                                </p>
+                                <button class="btn-secondary" disabled>
+                                    Crédit insuffisant
+                                </button>
+                            <?php endif; ?>
+                        <?php else: ?>
+                            <p class="no-places">
+                                <span class="material-icons">event_busy</span>
+                                Aucune place disponible
+                            </p>
+                        <?php endif; ?>
+                    <?php else: ?>
+                        <div class="login-invitation">
+                            <div class="decoration-circle circle-1"></div>
+                            <div class="decoration-circle circle-2"></div>
+                            
+                            <div class="invitation-content">
+                                <div class="invitation-header">
+                                    <span class="material-icons">lock_open</span>
+                                    <h3>Rejoignez l'aventure EcoRide !</h3>
+                                    <p>Connectez-vous pour participer à ce covoiturage et découvrir tous nos services</p>
+                                </div>
+                                
+                                <div class="invitation-buttons">
+                                    <a href="login_secure.php" class="login-cta-btn">
+                                        <span class="material-icons">login</span>
+                                        Se connecter
+                                    </a>
+                                    <a href="register.php" class="register-cta-btn">
+                                        <span class="material-icons">person_add</span>
+                                        Créer un compte
+                                    </a>
+                                </div>
+                                
+                                <div class="invitation-footer">
+                                    <p>
+                                        <span class="material-icons">info</span>
+                                        L'inscription est gratuite et ne prend que 2 minutes
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+                </div>
+
+                <div class="back-links">
+                    <div class="links-wrapper">
+                        <a href="covoiturages.php" class="link-primary">
+                            ← Retour aux covoiturages
+                        </a>
+                        <a href="index.php" class="link-secondary">
+                            🏠 Retour à l'accueil
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de confirmation -->
+    <dialog id="confirm-modal" class="modal-dialog">
+        <form method="dialog" class="modal-form">
+            <div class="modal-content">
+                <div class="modal-icon-wrapper">
+                    <span class="material-icons" id="modal-anim-icon">check_circle</span>
+                </div>
+                <h3>Confirmer votre participation</h3>
+                <div class="modal-details">
+                    <p><strong>Trajet :</strong> <?= htmlspecialchars($covoiturage['ville_depart']) ?> → <?= htmlspecialchars($covoiturage['ville_arrivee']) ?></p>
+                    <p><strong>Date :</strong> <?= date('d/m/Y à H:i', strtotime($covoiturage['date_depart'])) ?></p>
+                    <p><strong>Prix :</strong> <?= number_format($covoiturage['prix'], 2) ?>€</p>
+                    <p><strong>Crédits à utiliser :</strong> <?= $credit_requis ?></p>
+                </div>
+                <p class="modal-warning">Êtes-vous sûr de vouloir participer à ce covoiturage ?</p>
+                <div class="modal-buttons">
+                    <button type="button" id="cancel-btn" class="btn-secondary">Annuler</button>
+                    <button type="button" id="confirm-btn" class="btn-primary">Confirmer</button>
+                </div>
+            </div>
+        </form>
+    </dialog>
+
+    <!-- Modal de résultat participation -->
+    <dialog id="result-modal" class="modal-dialog">
+        <div class="modal-content modal-result">
+            <span class="material-icons" id="result-modal-icon">check_circle</span>
+            <h3 id="result-modal-title">Participation confirmée !</h3>
+            <p id="result-modal-msg">Votre participation a bien été prise en compte.</p>
+            <button type="button" id="result-modal-close" class="btn-primary">Fermer</button>
+        </div>
+    </dialog>
+
+    <script src="/frontend/public/assets/js/details.js"></script>
+</body>
+</html>
