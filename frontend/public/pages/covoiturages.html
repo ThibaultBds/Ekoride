@@ -1,174 +1,167 @@
-<!DOCTYPE html>
-<html lang="fr">
+    <!DOCTYPE html>
+    <html lang="fr">
 
-<head>
-    <meta charset="utf-8">
-    <title>Covoiturages</title>
-    <link href="/frontend/public/assets/css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/tabler-icons@2.44.0/iconfont/tabler-icons.min.css" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="utf-8">
+        <title>Covoiturages</title>
+        <link href="/frontend/public/assets/css/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+        <link href="https://unpkg.com/tabler-icons@2.44.0/iconfont/tabler-icons.min.css" rel="stylesheet">
+    </head>
 
 
-<body>
-    <header>
-        <div class="logo-ecoride">
-        <img src="/frontend/public/assets/img/Eco.png" alt="Leaf icon">
-       </div>
-        <nav>
-            <ul>
-                <li><i class="fa-solid fa-house"></i><a href="index.html"> Accueil </a></li>
-                <li><i class="fa-solid fa-car"></i> <a href="covoiturages.html">Covoiturages</a></li>
-                <li><i class="fa-solid fa-question"></i> <a href="quisommesnous.html">Qui sommes-nous ?</a></li>
-                <li><i class="fa-solid fa-address-book"></i> <a href="contact.html">Contact</a></li>
-                <li><i class="fa-solid fa-users"></i> <a href="connexion.html">Connexion</a></li>
-                <li><i class="fa-solid fa-user-plus"></i> <a href="inscriptions.html">Inscriptions</a></li>
-            </ul>
-        </nav>
-    </header>
-
-   <div class="contx1">
-    <h2>Choisissez le covoiturage qui vous convient !</h2>
-    <p>Ékoride vous permet de vous déplacer en respectant vos valeurs, et ça.. ça n'a pas de prix!</p>
-</div>
-
-    <form class="form-covoit">
-        <input class="depart-covoit" type="text" id="departure" name="departure" placeholder="Départ">
-        <input class="arrivee-covoit" type="text" id="arrival" name="arrival" placeholder="Arrivée">
-        <input class="date-covoit" type="text" id="date" name="date" placeholder="Date">
-        <button class="btn-covoit" type="submit">Rechercher</button>
-    </form>
-    <div class="form-avances">
-        <div class="txt-fil">
-            <p>Filtres avancés :</p>
-            <button id="toggleFiltres" aria-expanded="false" aria-controls="zoneFiltres">
-                Voir les options
-            </button>"
+    <body>
+        <header>
+            <div class="logo-ecoride">
+            <img src="/frontend/public/assets/img/Eco.png" alt="Leaf icon">
         </div>
-        <form class="adv-fil filtres-masques" id="zoneFiltres" method="get" action>
-            <label for="prix_max">Prix max :</label>
-            <input type="number" name="prix_max" id="prix_max" min="0">
-            <label for="note_min">Note minimale :</label>
-            <input type="number" name="note_min" id="note_min" min="1" max="5">
-            <label for="ecologique">Écologique :</label>
-            <select name="ecologique" id="ecologique">
-                <option value>Tous</option>
-                <option value>Oui</option>
-                <option value>Non</option>
-            </select>
-            <button type="submit">Filtrer</button>
-        </form>
-    </div>
-    <div class="cards">
-        <div class="ride-card" data-price="15.00" data-ecological="false" data-rating="0.00" data-duration="0">
-            <div class="ride-header">
-                <h3>Paris → Lyon</h3>
-                <div class="ride-price">15.00 €</div>
-            </div>
-            <div class="ride-details">
-                <p>
-                    <span class="material-icons">schedule</span>
-                    04/01/2026 à 00:00
-                </p>
-                <p>
-                <div class="justine-card">
-                    <img src="/frontend/public/assets/img/justine.jpeg" alt="Avatar de Justine">
-                    Justine L.
-                </div>
-                </p>
-                <p>
-                    1.4 <i class="fa-solid fa-star"></i>
-                </p>
-                <p>
-                    <span class="material-icons">people</span>
-                    4 places restantes
-                </p>
-            </div>
-            <div class="ride-btn">
-                <button>Voir détails</button>
-            </div>
-        </div>
-
-        <div class="ride-card" data-price="15.00" data-ecological="false" data-rating="0.00" data-duration="0">
-            <div class="ride-header">
-                <h3>Paris → Lyon</h3>
-                <div class="ride-price">15.00 €</div>
-            </div>
-            <div class="ride-details">
-                <p>
-                    <span class="material-icons">schedule</span>
-                    04/01/2026 à 00:00
-                </p>
-                <p>
-                <div class="justine-card">
-                    <img src="/frontend/public/assets/img/magalie.jpeg" alt="Avatar de Justine">
-                    Magalie R.
-                </div>
-                </p>
-                <p>
-                    3.1 <i class="fa-solid fa-star"></i>
-
-                </p>
-                <p>
-                    <span class="material-icons">people</span>
-                    4 places restantes
-                </p>
-            </div>
-            <div class="ride-btn">
-                <button>Voir détails</button>
-            </div>
-        </div>
-
-        <div class="ride-card" data-price="15.00" data-ecological="false" data-rating="0.00" data-duration="0">
-            <div class="ride-header">
-                <h3>Paris → Lyon</h3>
-                <div class="ride-price">15.00 €</div>
-            </div>
-            <div class="ride-details">
-                <p>
-                    <span class="material-icons">schedule</span>
-                    04/01/2026 à 00:00
-                </p>
-                <p>
-                <div class="justine-card">
-                    <img src="/frontend/public/assets/img/antoine.jpeg" alt="Avatar de Justine">
-                    Antoine A.
-                </div>
-                </p>
-                <p>
-                    4.2 <i class="fa-solid fa-star"></i>
-                </p>
-                <p>
-                    <span class="material-icons">people</span>
-                    4 places restantes
-                </p>
-            </div>
-            <div class="ride-btn">
-                <button>Voir détails</button>
-            </div>
-        </div>
-
-
-
-    </div>
-<footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Mon Super Site Web</p>
-            <nav class="footer-nav">
+            <nav>
                 <ul>
-                    <li><a href="quisommesnous.html">Qui sommes-nous ?</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                    <li><a href="/mentions-legales">Mentions Légales</a></li>
+                    <li><i class="fa-solid fa-house"></i><a href="index.html"> Accueil </a></li>
+                    <li><i class="fa-solid fa-car"></i> <a href="covoiturages.html">Covoiturages</a></li>
+                    <li><i class="fa-solid fa-question"></i> <a href="quisommesnous.html">Qui sommes-nous ?</a></li>
+                    <li><i class="fa-solid fa-address-book"></i> <a href="contact.html">Contact</a></li>
+                    <li><i class="fa-solid fa-users"></i> <a href="connexion.html">Connexion</a></li>
+                    <li><i class="fa-solid fa-user-plus"></i> <a href="inscriptions.html">Inscriptions</a></li>
                 </ul>
             </nav>
-            <div class="social-links">
-                </div>
-        </div>
-    </footer>
-<script src="/frontend/public/assets/js/script.js"></script>
-</body>
+        </header>
 
-</html>
+    <div class="contx1">
+        <h2>Choisissez le covoiturage qui vous convient !</h2>
+        <p>Ékoride vous permet de vous déplacer en respectant vos valeurs, et ça.. ça n'a pas de prix!</p>
+    </div>
+
+        <form class="form-covoit">
+            <input class="depart-covoit" type="text" id="departure" name="departure" placeholder="Départ">
+            <input class="arrivee-covoit" type="text" id="arrival" name="arrival" placeholder="Arrivée">
+            <input class="date-covoit" type="text" id="date" name="date" placeholder="Date">
+            <button class="btn-covoit" type="submit">Rechercher</button>
+        </form>
+        <div class="page-container">
+            <aside class="form-avances">
+            <div class="txt-fil">
+                <p>Filtres avancés :</p>
+                <button id="toggleFiltres" aria-expanded="false" aria-controls="zoneFiltres">
+                    Voir les options
+                </button>
+            </div>
+            <form class="adv-fil filtres-masques" id="zoneFiltres" method="get" action>
+                <label for="prix_max">Prix max :</label>
+                <input type="number" name="prix_max" id="prix_max" min="0">
+                <label for="note_min">Note minimale :</label>
+                <input type="number" name="note_min" id="note_min" min="1" max="5">
+                <label for="ecologique">Écologique :</label>
+                <select name="ecologique" id="ecologique">
+                    <option value>Tous</option>
+                    <option value>Oui</option>
+                    <option value>Non</option>
+                </select>
+                <button type="submit">Filtrer</button>
+            </form>
+            </aside>
+            <main class="main-content">
+                <div class="cards">
+            <div class="ride-card" data-price="15.00" data-ecological="false" data-rating="0.00" data-duration="0">
+                <div class="ride-header">
+                    <h3>Paris → Lyon</h3>
+                    <div class="ride-price">15.00 €</div>
+                </div>
+                <div class="ride-details">
+                    <div class="ride-info">
+                        <span class="material-icons">schedule</span>
+                        04/01/2026 à 00:00
+                    </div>
+                    <div class="justine-card">
+                        <img src="/frontend/public/assets/img/justine.jpeg" alt="Avatar de Justine">
+                        Justine L.
+                    </div>
+                    <div class="ride-rating">
+                        1.4 <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="ride-places">
+                        <span class="material-icons">people</span>
+                        4 places restantes
+                    </div>
+                </div>
+                <div class="ride-btn">
+                    <button>Voir détails</button>
+                </div>
+            </div>
+            <div class="ride-card" data-price="15.00" data-ecological="false" data-rating="0.00" data-duration="0">
+                <div class="ride-header">
+                    <h3>Paris → Lyon</h3>
+                    <div class="ride-price">15.00 €</div>
+                </div>
+                <div class="ride-details">
+                    <div class="ride-info">
+                        <span class="material-icons">schedule</span>
+                        04/01/2026 à 00:00
+                    </div>
+                    <div class="justine-card">
+                        <img src="/frontend/public/assets/img/magalie.jpeg" alt="Avatar de Magalie">
+                        Magalie R.
+                    </div>
+                    <div class="ride-rating">
+                        3.1 <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="ride-places">
+                        <span class="material-icons">people</span>
+                        4 places restantes
+                    </div>
+                </div>
+                <div class="ride-btn">
+                    <button>Voir détails</button>
+                </div>
+            </div>
+
+            <div class="ride-card" data-price="15.00" data-ecological="false" data-rating="0.00" data-duration="0">
+                <div class="ride-header">
+                    <h3>Paris → Lyon</h3>
+                    <div class="ride-price">15.00 €</div>
+                </div>
+                <div class="ride-details">
+                    <div class="ride-info">
+                        <span class="material-icons">schedule</span>
+                        04/01/2026 à 00:00
+                    </div>
+                    <div class="justine-card">
+                        <img src="/frontend/public/assets/img/antoine.jpeg" alt="Avatar de Antoine">
+                        Antoine A.
+                    </div>
+                    <div class="ride-rating">
+                        4.2 <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="ride-places">
+                        <span class="material-icons">people</span>
+                        4 places restantes
+                    </div>
+                </div>
+                <div class="ride-btn">
+                    <button>Voir détails</button>
+                </div>
+            </div>
+                </div>
+            </main>
+        </div>
+    <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 Mon Super Site Web</p>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="quisommesnous.html">Qui sommes-nous ?</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/mentions-legales">Mentions Légales</a></li>
+                    </ul>
+                </nav>
+                <div class="social-links">
+                    </div>
+            </div>
+        </footer>
+    <script src="/frontend/public/assets/js/script.js"></script>
+    </body>
+
+    </html>
